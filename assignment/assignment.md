@@ -28,7 +28,7 @@ Create a new HTML file index.html and link it to a new CSS file styles.css. (5 p
 
 Inside the BODY of your HTML file, create a TABLE with a CAPTION "My Investment Portfolio". The table should contain three columns: "Asset", "Shares", and "Value". Fill in some sample data (at least three rows). (30 points)
 
-### Section 3: Styling with CSS (50 points)
+### Section 3: Styling with CSS (55 points)
 
 #### Task 3.1
 
@@ -50,7 +50,7 @@ Create a class highlight in your CSS. This class should give elements a yellow b
 
 Position the table absolutely in the center of the page, both vertically and horizontally. (20 points)
 
-### Section 4: Enhancements (Extra Credit - 15 points)
+### Section 4: Enhancements (Extra Credit - 10 points)
 
 #### Task 4.1
 
@@ -59,10 +59,6 @@ Create a pseudo-class rule that changes the background color of a row when it is
 #### Task 4.2
 
 Using the nth-of-type pseudo-class, select even rows in your table and give them a light gray background color to create a striped effect. (5 points)
-
-#### Task 4.3
-
-Using the nth-of-type pseudo-class, select the 2nd td in your table and align the text to the center. (5 points)
 
 ---
 
