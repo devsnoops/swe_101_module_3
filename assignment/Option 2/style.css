@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nav section */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 16px;
+  height: 60px;
+}
+
+.nav_left {
+  display: flex;
+  align-items: center;
+  padding: 0px 16px;
+  gap: 28px;
+}
+
+.nav_right {
+  display: flex;
+  align-items: center;
+}
+
+#logo_agoda {
+  width: 90px;
+  height: 37px;
+  cursor: pointer;
+}
+
+.nav_button {
+  padding: 12px;
+  background-color: white;
+  border-width: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#list_button {
+  white-space: nowrap;
+  border-style: solid;
+  color: rgb(255, 86, 125);
+  border-color: rgb(255, 86, 125);
+}
+
+#list_button:hover {
+  color: white;
+  background-color: rgb(255, 86, 125);
+  transition: 300ms;
+}
+
+#flag {
+  width: 26px;
+  height: 20px;
+  margin: 16px;
+  cursor: pointer;
+}
+
+#sgd {
+  background-color: white;
+  margin: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+#signin_button {
+  /* nowrap prevented the weird zoom-in issues */
+  white-space: nowrap;
+  border: none;
+  color: rgb(83, 146, 249);
+  padding: 12px;
+  margin-right: 8px;
+}
+
+#signin_button:hover {
+  color: white;
+  background-color: rgb(83, 146, 249);
+  transition: 300ms;
+}
+
+#create_button {
+  white-space: nowrap;
+  border-style: solid;
+  color: rgb(83, 146, 249);
+  border-color: rgb(83, 146, 249);
+  padding: 12px;
+  margin-right: 8px;
+}
+
+#create_button:hover {
+  color: white;
+  border-color: rgb(83, 146, 249);
+  background-color: rgb(83, 146, 249);
+  transition: 300ms;
+}
+
+#icon_checkout {
+  padding: 0px 16px;
+  margin: 0px 8px;
+  cursor: pointer;
+}
+
+#settings_button {
+  font-size: 36px;
+  padding: 4px 12px 8px 12px;
+  margin: 0px 4px;
+  height: 40px;
+  /* inline-flex was key to adjust a single span item */
+  display: inline-flex;
+  align-items: center;
+  border: none;
+}
+
+#settings_button:hover {
+  color: white;
+  background-color: rgb(83, 146, 249);
+  transition: 300ms;
+}
+
+/* Notification row */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 32px;
+  white-space: nowrap;
+  background-color: rgb(253, 238, 230);
+  height: 30px;
+}
+
+#sale {
+  margin-right: 16px;
+}
+
+#deals {
+  white-space: nowrap;
+  border-style: solid;
+  color: rgb(83, 146, 249);
+  border-color: rgb(83, 146, 249);
+  padding: 4px 8px;
+  margin: 16px;
+}
+
+#deals:hover {
+  color: white;
+  border-color: rgb(83, 146, 249);
+  background-color: rgb(83, 146, 249);
+  transition: 300ms;
+}
+
+/* search box */
+
+#search_background {
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 320px;
+}
+
+.search_main {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  margin: auto;
+  text-align: center;
+  padding: 37px 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  padding-bottom: 24px;
+}
+
+.search_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0px 32px;
+  width: 816px;
+  border-radius: 8px;
+  border: none;
+  height: 48px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 6px 2px;
+  z-index: 998;
+}
+
+.search_click {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0px 8px;
+  cursor: pointer;
+}
+
+/* interesting use of negative margin for underline */
+#hotels {
+  color: rgb(83, 146, 249);
+  padding: 0px 0px 8px 0px;
+  margin: 0px 8px -10px 8px;
+  border-style: none none solid none;
+}
+
+.set {
+  display: flex;
+  flex-direction: column;
+}
+
+.search_click2 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 4px;
+  padding: 0px 8px 21px 8px;
+  cursor: pointer;
+}
+
+#bundle {
+  display: flex;
+  background-color: rgb(225, 45, 45);
+  color: white;
+  padding: 4px;
+  font-size: 12px;
+  border-radius: 2px;
+  width: fit-content;
+  margin: auto;
+}
+
+/* main search box */
+
+.big_box {
+  background-color: #f8f7f9;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 3px;
+  border-radius: 16px;
+  height: 252px;
+  width: 1028px;
+  padding: 32px 48px 48px 48px;
+  position: relative;
+  z-index: 997;
+  margin-top: -16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stay_select {
+  display: flex;
+  gap: 10px;
+}
+
+.stays {
+  display: inline-flex;
+  color: rgb(49, 112, 231);
+  border-style: solid;
+  border-width: 2px;
+  background-color: rgb(227, 237, 255);
+  border-radius: 999px;
+  min-height: 36px;
+  align-items: center;
+  padding: 0px 16px;
+  cursor: pointer;
+}
+
+.stays:hover {
+  background-color: rgb(207, 224, 255);
+  transition: 200ms;
+}
+
+#stay_day {
+  border-color: rgb(193, 203, 224);
+  color: rgb(36, 38, 44);
+  background-color: rgb(255, 255, 255);
+  border-width: 1px;
+}
+#stay_day:hover {
+  color: rgb(49, 112, 231);
+  border-color: rgb(49, 112, 231);
+  background-color: rgb(227, 237, 255);
+  border-width: 1px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  padding: 19px;
+  border-style: solid;
+  background-color: white;
+  border-radius: 8px;
+  border-color: #e7e6e8;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+input {
+  display: flex;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+input:focus {
+  outline: none;
+}
+
+#magnifying_glass {
+  width: 25px;
+  height: 25px;
+}
+
+.checkIn {
+  display: flex;
+  align-items: center;
+  border-right-style: solid;
+  padding: 8px 110px 8px 12px;
+  border-color: #e7e6e8;
+  border-width: 2px;
+}
+
+.dateDay {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2px;
+}
+
+#smallFont {
+  color: #989898;
+}
+
+.checkOut {
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+}
+
+.checkInOut {
+  display: flex;
+  padding: 5px;
+  border-style: solid;
+  background-color: white;
+  border-radius: 8px;
+  border-color: #e7e6e8;
+  border-width: 1px;
+  width: 50%;
+  cursor: pointer;
+}
+
+.checkInOutAdult {
+  display: flex;
+  gap: 12px;
+}
+
+.paxBoxLeft {
+  display: flex;
+  align-items: center;
+}
+
+.paxBox {
+  display: flex;
+  justify-content: space-between;
+  width: 460px;
+  padding-right: 10px;
+  align-items: center;
+}
+
+.searchBottom {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 32px;
+}
+
+#bundle2 {
+  display: flex;
+  background-color: rgb(225, 45, 45);
+  color: white;
+  padding: 4px;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.addFlight {
+  display: inline-flex;
+  color: rgb(49, 112, 231);
+  border-radius: 999px;
+  min-height: 36px;
+  align-items: center;
+  padding: 0px 16px;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.addFlight:hover {
+  background-color: #ebe8fd;
+  transition: 200ms;
+}
+
+#plus {
+  font-size: 30px;
+}
+
+.searchBar {
+  margin: auto;
+  width: 440px;
+  color: white;
+  position: relative;
+  font-size: 20px;
+  background-color: rgb(83, 146, 249);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 1px;
+}
+
+.searchBar:hover {
+  background-color: rgb(154, 187, 241);
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.middle {
+  padding-bottom: 38px;
+}
+
+.accomodations.container {
+  padding-top: 100px;
+}
+
+h3 {
+  margin: 32px 0px 16px 0px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#viewAll {
+  display: block;
+  position: relative;
+  text-align: right;
+  bottom: 38px;
+  right: 430px;
+  color: #5392f9;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #5392f9;
+}
+
+.accomScroll {
+  width: 55%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: auto;
+  display: flex;
+  gap: 16px;
+  padding-bottom: 16px;
+}
+
+.accomImg {
+  border-style: transparent;
+  border-radius: 8px;
+  height: 185px;
+}
+
+.circle {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+#circle {
+  background-color: #5392f9;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#circle2 {
+  background-color: rgb(191, 191, 196);
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#rightArrow {
+  position: absolute;
+  background-color: white;
+  right: 440px;
+  top: 820px;
+  display: inline-block;
+  height: 24px;
+  border-style: transparent;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+}
+
+#buttonFixed {
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  background: rgb(49, 112, 231);
+  width: fit-content;
+  padding: 8px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+#buttonFixed:hover {
+  background: rgb(95, 141, 226);
+  transition: 300ms;
+}
+
+#phone {
+  height: 24px;
+  padding-right: 8px;
+}
